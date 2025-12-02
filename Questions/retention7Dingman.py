@@ -36,8 +36,8 @@ with pm.Model() as model2:
 #------------------------------------------------------------------------
 
 
-p302 = expit(trace.posterior['alpha'].values)
-p402 = expit(trace.posterior['alpha'].values + trace.posterior['beta'].values) #need to add the alpha values to follow the above model
+p302 = expit(trace2.posterior['alpha'].values)
+p402 = expit(trace2.posterior['alpha'].values + trace2.posterior['beta'].values) #need to add the alpha values to follow the above model
 
 change2 = p402 - p302
 print(type(change2)) 
